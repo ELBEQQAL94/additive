@@ -10,7 +10,7 @@
 * [x] Install prop types
 * [x] Install bootstrap
 * [x] Add Employee Explorer Component
-* [ ] Add Employee Overview Component
+* [x] Add Employee Overview Component
 
 ## API
 * http://api.additivasia.io/api/v1/assignment/employees/John%20Hartman

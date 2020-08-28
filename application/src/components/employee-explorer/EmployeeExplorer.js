@@ -6,10 +6,10 @@ import PropTypes from 'prop-types';
 // Styles
 import './EmployeeExplorer.scss';
 
-const EmployeeExplorer = () => {
+const EmployeeExplorer = ({ showEmployeeView }) => {
   return (
     <div className="employee__explorer--container">
-      <h1>Employee Explorer</h1>
+      <h1 onClick={() => showEmployeeView()}>Employee Explorer</h1>
       <div className="search__form--container">
         <form className="form-inline">
           <div className="form-group">
