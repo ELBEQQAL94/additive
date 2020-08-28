@@ -11,7 +11,7 @@ import './EmployeeOverview.scss';
 
 const EmployeeOverview = ({results, name}) => {
 
-  const data = Object.values(results[1])
+  const data = results.length > 1 && Object.values(results[1])
 
   return (
     <div className="employee__overview">
@@ -24,9 +24,10 @@ const EmployeeOverview = ({results, name}) => {
           </h2>
           <ul className="list-group">
             {
+              data ?
               data[0]?.map((name, index) => (
                 <li key={index} className="list-group-item">{name}</li>
-              ))
+              )) : <p>No Subordinates of employee! </p>
             }
           </ul>
         </div>
