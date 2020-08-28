@@ -3,10 +3,16 @@ import React from 'react';
 // Types
 import PropTypes from 'prop-types';
 
+// Components
+import Spinner from '../Spinner';
+
 // Styles
 import './EmployeeOverview.scss';
 
-const EmployeeOverview = () => {
+const EmployeeOverview = ({results, name}) => {
+
+  const data = Object.values(results[1])
+
   return (
     <div className="employee__overview">
       <div className="container">
@@ -14,19 +20,24 @@ const EmployeeOverview = () => {
         <div className="subordinates">
           <h2>
             Subordinates of employee
-            <strong className="text-capitalize">jhon hartman</strong>:
+            <strong className="text-capitalize">{name.length > 0 ? name : <Spinner />}</strong>:
           </h2>
-          <ul class="list-group">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Morbi leo risus</li>
-            <li class="list-group-item">Porta ac consectetur ac</li>
-            <li class="list-group-item">Vestibulum at eros</li>
+          <ul className="list-group">
+            {
+              data[0]?.map((name, index) => (
+                <li key={index} className="list-group-item">{name}</li>
+              ))
+            }
           </ul>
         </div>
       </div>
     </div>
   );
+};
+
+EmployeeOverview.propTypes = {
+  results: PropTypes.array.isRequired,
+  name: PropTypes.string.isRequired,
 };
 
 export default EmployeeOverview;

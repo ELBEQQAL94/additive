@@ -15,15 +15,20 @@ $xs: 575px;
   }
   .search__form--container {
     width: 50vw;
-    .form-group {
-      margin-right: 10px;
-      width: 80%;
-      input {
-        width: 100%;
+    .form-inline {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .form-group {
+        margin-right: 10px;
+        width: 80%;
+        input {
+          width: 100%;
+        }
       }
-    }
-    button {
-      width: 18%;
+      button {
+        width: 18%;
+      }
     }
   }
 }
