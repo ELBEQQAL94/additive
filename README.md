@@ -4,11 +4,11 @@
 ## TODO:
 * [x] Setup repo
 * [x] Setup create react app
-* [ ] Setup eslint
-* [ ] Install SCSS
-* [ ] Install axios
-* [ ] Install prop types
-* [ ] Install bootstrap
+* [x] Setup eslint
+* [x] Install SCSS
+* [x] Install axios
+* [x] Install prop types
+* [x] Install bootstrap
 
 ## API
 * http://api.additivasia.io/api/v1/assignment/employees/John%20Hartman
