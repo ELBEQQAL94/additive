@@ -5,3 +5,6 @@
 * [x] Setup create react app
 
 ## Depoyment:
+
+* [ ] vercel
+* live demo: 
